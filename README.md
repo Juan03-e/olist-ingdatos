@@ -34,5 +34,5 @@ y subir los 9 CSV a `data/raw/`.
 
 ## Capas externas
 
-- Límites municipales: https://github.com/tbrugz/geodata-br (`geojson/geojs-100-mun.json`), fuente IBGE.
+- Límites municipales: https://github.com/tbrugz/geodata-br (`geojson/geojs-100-mun.json`), fuente IBGE, licencia Creative Commons CC0 1.0 (dominio público).
 - Sedes municipales, capitales y regiones: https://github.com/kelvins/municipios-brasileiros (MIT), fuente IBGE.
