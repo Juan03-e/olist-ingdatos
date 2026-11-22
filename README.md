@@ -1,6 +1,6 @@
 # Ingeniería de Datos 2026 · Casos de estudio 1 y 2 · Equipo 6
 
-Bruno Fidalgo y Juan Pablo Esteva. Dataset: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) (CC BY-NC-SA 4.0).
+Juan Pablo Esteva, Bruno Fidalgo, Ivan Lomando y Francisco Von Sanden. Dataset: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) (CC BY-NC-SA 4.0).
 
 ## Cómo reproducir
 
