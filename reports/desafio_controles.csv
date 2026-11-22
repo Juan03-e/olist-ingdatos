@@ -1,0 +1,11 @@
+escenario,regla que se viola,detectado,controles que fallaron
+pedido duplicado,unicidad de order_id,True,cantidad de pedidos distinta de orders; field_uniqueness
+puntaje 6,review_score en {1..5},True,"isin([1, 2, 3, 4, 5])"
+precio negativo,price > 0,True,greater_than(0)
+aprobación 2 días antes de la compra,compra <= aprobación,True,order_purchase_timestamp <= order_approved_at
+latitud y longitud invertidas,coordenadas dentro de Brasil,True,"in_range(-33.75, 5.3); in_range(-73.99, -34.79)"
+se pierde un pedido con ítems,integridad pedidos/items,True,cantidad de pedidos distinta de orders; items con order_id que no está en pedidos
+fecha leída como texto,tipos del contrato,True,"dtype('datetime64[ns]'); in_range(2016-01-01 00:00:00, 2018-12-31 00:00:00)"
+todos los 5 pasan a 1,ninguna (valor válido pero falso),False,-
+llego_tarde invertido,ninguna (incoherente con dias_vs_estimado),False,-
+precios multiplicados por 10,ninguna (cambio de escala),False,-

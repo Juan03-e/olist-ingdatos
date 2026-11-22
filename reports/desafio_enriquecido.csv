@@ -1,0 +1,7 @@
+escenario,regla que se viola,contrato Caso 1,controles nuevos,qué falló
+"total_precio de 0,01 BRL en 20 pedidos",ratio_flete_precio <= 25,pasa,falla,"in_range(0, 25)"
+fecha estimada 3 días antes de la compra,dias_prometidos >= 0,pasa,falla,"in_range(0, 180)"
+capa municipal sin SP,todo pedido con coordenadas recibe municipio,pasa,falla,pedidos asignados por cercanía <= 0.1%; pedidos con municipio de otra UF <= 0.1%; todo pedido con coordenadas recibe un municipio
+500 clientes de SP con coordenadas de Salvador,"municipio de otra UF <= 0,1%",pasa,falla,pedidos con municipio de otra UF <= 0.1%
+distancias calculadas en grados (EPSG:4326),distancias en km plausibles,pasa,falla,"mediana de distancia vendedor-cliente > 100 km (distancias en km, no e"
+50 clientes de SP movidos a Campinas,ninguna (ubicación válida pero falsa),pasa,pasa,-

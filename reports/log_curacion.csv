@@ -1,0 +1,19 @@
+decisión,tabla,acción,columna,filas afectadas
+D05,reviews,se conserva la reseña más reciente por pedido,elegida == False,551
+D07,orders,marcar pedido sin ítems,sin_items,775
+D07,orders,marcar pedido sin pago,sin_pago,1
+D07,orders,marcar pedido sin reseña,sin_resena,768
+D08,orders,marcar delivered sin fecha de entrega,delivered_sin_fecha,8
+D10,products,traducir 2 categorías a mano,categoria,13
+D10,products,etiquetar sin_categoria,sin_categoria,610
+D12,orders,marcar entrega al transportista posterior a la entrega al cliente,transportista_despues_cliente,23
+D13,payments,marcar pagos de valor 0,pago_cero,9
+D13,payments,0 cuotas pasa a 1 cuota,cuotas_corregidas,2
+D14,products,peso 0 pasa a nulo,peso_invalido,4
+D15,items,fecha límite de envío fuera de rango pasa a nulo,limite_envio_invalido,4
+D16,orders,marcar no entregado con fecha de entrega,no_entregado_con_fecha,6
+D16,orders,marcar delivered sin aprobación,delivered_sin_aprobacion,14
+D17,geolocation,descartar puntos fuera de Brasil antes de agregar,fuera_de_brasil,42
+D17,customers,marcar cliente sin coordenadas,cliente_sin_coordenadas,279
+D17,sellers,marcar vendedor sin coordenadas,vendedor_sin_coordenadas,7
+D11,orders,marcar pago distinto de precio + flete,pago_distinto_items,249

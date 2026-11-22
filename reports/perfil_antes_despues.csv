@@ -1,0 +1,61 @@
+dimensión,tabla,regla,evaluadas_antes,casos_antes,sin_marcar_antes,pct_antes,umbral_pct_antes,estado_antes,evaluadas_despues,casos_despues,sin_marcar_despues,pct_despues,umbral_pct_despues,estado_despues
+cobertura,orders,el pedido tiene pagos,99441.0,1.0,1.0,0.0,0.0,REVISAR,99441,1,0,0.0,0,MARCADO
+cobertura,orders,el pedido tiene reseña,99441.0,768.0,768.0,0.77,0.0,REVISAR,99441,768,0,0.77,0,MARCADO
+cobertura,orders,el pedido tiene ítems,99441.0,775.0,775.0,0.78,0.0,REVISAR,99441,775,0,0.78,0,MARCADO
+completitud,items,shipping_limit_date no es nulo,,,,,,,112650,4,4,0.0,5,OK
+completitud,orders,order_approved_at no es nulo,99441.0,160.0,160.0,0.16,5.0,OK,99441,160,160,0.16,5,OK
+completitud,orders,order_delivered_carrier_date no es nulo,99441.0,1783.0,1783.0,1.79,5.0,OK,99441,1783,1783,1.79,5,OK
+completitud,orders,order_delivered_customer_date no es nulo,99441.0,2965.0,2965.0,2.98,5.0,OK,99441,2965,2965,2.98,5,OK
+completitud,products,product_category_name no es nulo,32951.0,610.0,610.0,1.85,5.0,OK,32951,610,0,1.85,5,OK
+completitud,products,product_description_lenght no es nulo,32951.0,610.0,610.0,1.85,5.0,OK,32951,610,0,1.85,5,OK
+completitud,products,product_height_cm no es nulo,32951.0,2.0,2.0,0.01,5.0,OK,32951,2,1,0.01,5,OK
+completitud,products,product_length_cm no es nulo,32951.0,2.0,2.0,0.01,5.0,OK,32951,2,1,0.01,5,OK
+completitud,products,product_name_lenght no es nulo,32951.0,610.0,610.0,1.85,5.0,OK,32951,610,0,1.85,5,OK
+completitud,products,product_photos_qty no es nulo,32951.0,610.0,610.0,1.85,5.0,OK,32951,610,0,1.85,5,OK
+completitud,products,product_weight_g no es nulo,32951.0,2.0,2.0,0.01,5.0,OK,32951,6,5,0.02,5,OK
+completitud,products,product_width_cm no es nulo,32951.0,2.0,2.0,0.01,5.0,OK,32951,2,1,0.01,5,OK
+completitud,reviews,review_comment_message no es nulo,99224.0,58247.0,58247.0,58.7,5.0,REVISAR,99224,58247,58247,58.7,5,REVISAR
+completitud,reviews,review_comment_title no es nulo,99224.0,87656.0,87656.0,88.34,5.0,REVISAR,99224,87656,87656,88.34,5,REVISAR
+consistencia,orders,compra <= aprobación,99281.0,0.0,0.0,0.0,0.0,OK,99281,0,0,0.0,0,OK
+consistencia,orders,entrega al transportista <= entrega al cliente,96475.0,23.0,23.0,0.02,0.0,REVISAR,96475,23,0,0.02,0,MARCADO
+consistencia,orders,lo pagado coincide con precio + flete (±1 BRL),98665.0,249.0,249.0,0.25,1.0,OK,98665,249,0,0.25,1,OK
+consistencia,orders,"si está delivered, tiene aprobación",96478.0,14.0,14.0,0.01,0.0,REVISAR,96478,14,0,0.01,0,MARCADO
+consistencia,orders,"si está delivered, tiene fecha de entrega",96478.0,8.0,8.0,0.01,0.0,REVISAR,96478,8,0,0.01,0,MARCADO
+consistencia,orders,"si no está delivered, no tiene fecha de entrega",2963.0,6.0,6.0,0.2,0.0,REVISAR,2963,6,0,0.2,0,MARCADO
+integridad,customers,el prefijo CEP tiene coordenadas,99441.0,279.0,279.0,0.28,0.0,REVISAR,99441,279,0,0.28,0,MARCADO
+integridad,items,order_id existe en orders,112650.0,0.0,0.0,0.0,0.0,OK,112650,0,0,0.0,0,OK
+integridad,items,product_id existe en products,112650.0,0.0,0.0,0.0,0.0,OK,112650,0,0,0.0,0,OK
+integridad,items,seller_id existe en sellers,112650.0,0.0,0.0,0.0,0.0,OK,112650,0,0,0.0,0,OK
+integridad,orders,customer_id existe en customers,99441.0,0.0,0.0,0.0,0.0,OK,99441,0,0,0.0,0,OK
+integridad,payments,order_id existe en orders,103886.0,0.0,0.0,0.0,0.0,OK,103886,0,0,0.0,0,OK
+integridad,products,la categoría tiene traducción,32341.0,13.0,13.0,0.04,0.0,REVISAR,32341,0,0,0.0,0,OK
+integridad,reviews,order_id existe en orders,99224.0,0.0,0.0,0.0,0.0,OK,99224,0,0,0.0,0,OK
+integridad,sellers,el prefijo CEP tiene coordenadas,3095.0,7.0,7.0,0.23,0.0,REVISAR,3095,7,0,0.23,0,MARCADO
+unicidad,customers,customer_id no se repite,99441.0,0.0,0.0,0.0,0.0,OK,99441,0,0,0.0,0,OK
+unicidad,customers,no hay filas completamente repetidas,99441.0,0.0,0.0,0.0,0.0,OK,99441,0,0,0.0,0,OK
+unicidad,geolocation,no hay filas completamente repetidas,1000163.0,261831.0,261831.0,26.18,0.0,REVISAR,1000163,261831,261831,26.18,0,REVISAR
+unicidad,items,no hay filas completamente repetidas,112650.0,0.0,0.0,0.0,0.0,OK,112650,0,0,0.0,0,OK
+unicidad,items,order_id + order_item_id no se repite,112650.0,0.0,0.0,0.0,0.0,OK,112650,0,0,0.0,0,OK
+unicidad,orders,no hay filas completamente repetidas,99441.0,0.0,0.0,0.0,0.0,OK,99441,0,0,0.0,0,OK
+unicidad,orders,order_id no se repite,99441.0,0.0,0.0,0.0,0.0,OK,99441,0,0,0.0,0,OK
+unicidad,payments,no hay filas completamente repetidas,103886.0,0.0,0.0,0.0,0.0,OK,103886,0,0,0.0,0,OK
+unicidad,payments,order_id + payment_sequential no se repite,103886.0,0.0,0.0,0.0,0.0,OK,103886,0,0,0.0,0,OK
+unicidad,products,no hay filas completamente repetidas,32951.0,0.0,0.0,0.0,0.0,OK,32951,0,0,0.0,0,OK
+unicidad,products,product_id no se repite,32951.0,0.0,0.0,0.0,0.0,OK,32951,0,0,0.0,0,OK
+unicidad,reviews,no hay filas completamente repetidas,99224.0,0.0,0.0,0.0,0.0,OK,99224,0,0,0.0,0,OK
+unicidad,reviews,review_id + order_id no se repite,99224.0,0.0,0.0,0.0,0.0,OK,99224,0,0,0.0,0,OK
+unicidad,reviews,review_id no se repite,99224.0,814.0,814.0,0.82,0.0,REVISAR,99224,814,0,0.82,0,MARCADO
+unicidad,sellers,no hay filas completamente repetidas,3095.0,0.0,0.0,0.0,0.0,OK,3095,0,0,0.0,0,OK
+unicidad,sellers,seller_id no se repite,3095.0,0.0,0.0,0.0,0.0,OK,3095,0,0,0.0,0,OK
+unicidad,translation,no hay filas completamente repetidas,71.0,0.0,0.0,0.0,0.0,OK,73,0,0,0.0,0,OK
+validez,customers,prefijo CEP de 5 dígitos,99441.0,0.0,0.0,0.0,0.0,OK,99441,0,0,0.0,0,OK
+validez,geolocation,la coordenada cae dentro de Brasil,1000163.0,42.0,42.0,0.0,0.0,REVISAR,1000163,42,0,0.0,0,MARCADO
+validez,items,freight_value >= 0,112650.0,0.0,0.0,0.0,0.0,OK,112650,0,0,0.0,0,OK
+validez,items,price > 0,112650.0,0.0,0.0,0.0,0.0,OK,112650,0,0,0.0,0,OK
+validez,items,shipping_limit_date no posterior a la última compra,112650.0,4.0,4.0,0.0,0.0,REVISAR,112650,0,0,0.0,0,OK
+validez,orders,order_status es un estado conocido,99441.0,0.0,0.0,0.0,0.0,OK,99441,0,0,0.0,0,OK
+validez,payments,payment_installments >= 1,103886.0,2.0,2.0,0.0,0.0,REVISAR,103886,0,0,0.0,0,OK
+validez,payments,payment_value > 0,103886.0,9.0,9.0,0.01,0.0,REVISAR,103886,9,0,0.01,0,MARCADO
+validez,products,product_weight_g > 0,32949.0,4.0,4.0,0.01,0.0,REVISAR,32945,0,0,0.0,0,OK
+validez,reviews,review_score entre 1 y 5,99224.0,0.0,0.0,0.0,0.0,OK,99224,0,0,0.0,0,OK
+validez,sellers,prefijo CEP de 5 dígitos,3095.0,0.0,0.0,0.0,0.0,OK,3095,0,0,0.0,0,OK

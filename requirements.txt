@@ -1,0 +1,11 @@
+pandas>=2.0
+numpy
+matplotlib
+seaborn
+jupyter
+pyarrow
+pandera>=0.20
+scikit-learn
+geopandas>=0.14
+shapely>=2.0
+pyproj
